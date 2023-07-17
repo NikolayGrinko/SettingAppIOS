@@ -7,6 +7,13 @@
 
 import UIKit
 
+struct SettingOptions {
+    let title: String
+    let icon: UIImage?
+    let iconBackgroundColor: UIColor
+    let handler: (() -> Void)
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     private let tableView: UITableView = {
@@ -14,6 +21,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
